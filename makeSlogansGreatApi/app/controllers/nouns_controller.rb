@@ -1,0 +1,2 @@
+class NounsController < ApplicationController
+end
