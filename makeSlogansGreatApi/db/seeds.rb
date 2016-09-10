@@ -720,7 +720,7 @@ Noun.create!(content: 'breast exams')
 Noun.create!(content: 'arms')
 Noun.create!(content: 'sugar')
 Noun.create!(content: 'streams')
-Noun.create!(content: 'baskets'
+Noun.create!(content: 'baskets')
 Noun.create!(content: 'racism')
 Noun.create!(content: 'caps')
 Noun.create!(content: 'details')
