@@ -15,6 +15,26 @@
   padding: 10px 20px 10px 20px;
   border: solid #0f0f0e 2px;
   text-decoration: none;
+  margin: 5px auto;
+}
+
+.trumpton-sm {
+  background: #ec8405;
+  background-image: -webkit-linear-gradient(top, #ec8405, #995011);
+  background-image: -moz-linear-gradient(top, #ec8405, #995011);
+  background-image: -ms-linear-gradient(top, #ec8405, #995011);
+  background-image: -o-linear-gradient(top, #ec8405, #995011);
+  background-image: linear-gradient(to bottom, #ec8405, #995011);
+  -webkit-border-radius: 14;
+  -moz-border-radius: 14;
+  border-radius: 14px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 13px;
+  padding: 7px 14px 7px 14px;
+  border: solid #0f0f0e 2px;
+  text-decoration: none;
+  margin: 5px auto;
 }
 
 .trumpton:hover {
