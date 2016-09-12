@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import HelloWorld from './App';
+import routes from './config/routes';
 import './index.css';
 
 ReactDOM.render(
-  <HelloWorld />,
+  routes,
   document.getElementById('root')
 );
