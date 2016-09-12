@@ -8,7 +8,7 @@ class Home extends Component {
       <div>
         <p className='lead text-center'>I Have the Best words</p>
         <Link to='/generate'>
-          <button type='button' className="btn btn-lg btn-success center-block"> Get Started </button>
+          <button type='button' className="trumpton center-block"> Get Started </button>
         </Link>
 
       </div>
