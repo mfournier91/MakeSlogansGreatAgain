@@ -1,4 +1,9 @@
 
+body {
+  text-align: center;
+}
+
+
 .trumpton {
   background: #ec8405;
   background-image: -webkit-linear-gradient(top, #ec8405, #995011);
@@ -45,4 +50,17 @@
   background-image: -o-linear-gradient(top, #995011, #ec8405);
   background-image: linear-gradient(to bottom, #995011, #ec8405);
   text-decoration: none;
+}
+
+.inlineDiv {
+  display: inline;
+
+}
+
+.buttonBed {
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  padding: 10px;
+  background-color: rgb(0, 0, 0);
 }

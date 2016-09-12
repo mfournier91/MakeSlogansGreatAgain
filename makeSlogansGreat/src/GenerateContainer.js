@@ -43,6 +43,7 @@ class GenerateContainer extends Component {
         </div>
       )
     }
+    else {
     return (
       <Generate
       handleSubmitSloganQuery={(evt) => this.submitSloganQuery(evt)}
@@ -50,6 +51,7 @@ class GenerateContainer extends Component {
       handleSubmitAdjectiveQuery={(evt) => this.submitAdjectiveQuery(evt)}
       />
     )
+  }
   }
 
 }

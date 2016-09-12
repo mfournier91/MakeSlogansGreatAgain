@@ -8,17 +8,17 @@ class Generate extends Component {
   render(){
     let {handleSubmitSloganQuery, handleSubmitNounQuery, handleSubmitAdjectiveQuery} = this.props;
     return(
-      <div>
-        <form onSubmit={(evt) => handleSubmitNounQuery(evt)}>
-          <button type="submit" className="trumpton-sm center-block"> Make Nouns Great!</button>
+      <div className="buttonBed">
+        <form className="inlineDiv" onSubmit={(evt) => handleSubmitNounQuery(evt)}>
+          <button type="submit" className="trumpton-sm"> Make Nouns Great!</button>
         </form>
 
-        <form onSubmit={(evt) => handleSubmitSloganQuery(evt)}>
-          <button type="submit" className="trumpton center-block"> Make Slogans Great!</button>
+        <form className="inlineDiv" onSubmit={(evt) => handleSubmitSloganQuery(evt)}>
+          <button type="submit" className="trumpton"> Make Slogans Great!</button>
         </form>
 
-        <form onSubmit={(evt) => handleSubmitAdjectiveQuery(evt)}>
-          <button type="submit" className="trumpton-sm center-block"> Make Adjectives Great!</button>
+        <form className="inlineDiv" onSubmit={(evt) => handleSubmitAdjectiveQuery(evt)}>
+          <button type="submit" className="trumpton-sm"> Make Adjectives Great!</button>
         </form>
       </div>
     )

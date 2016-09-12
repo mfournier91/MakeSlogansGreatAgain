@@ -6,14 +6,14 @@ class Results extends Component{
     console.log(words);
     let results = words.map((word, index) => {
       return (
-        <div key={index}>
+        <div key={index} className="inlineDiv">
           {word.content}
         </div>
       )
     })
 
     return (
-      <div>
+      <div className="inlineDiv jumbotron">
       Make
       {results}
       Again
