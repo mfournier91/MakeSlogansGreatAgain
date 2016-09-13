@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
 import Generate from "./Generate"
 import Results from './Results';
-import {queryApi} from './Utils';
+import {queryApi, queryNounOnly, queryAdjOnly} from './Utils';
+
 
 class GenerateContainer extends Component {
   constructor(props){
@@ -9,11 +10,18 @@ class GenerateContainer extends Component {
     this.state = {
       hasGenerated: false,
       words: [],
+      noun: {},
+      adj: {},
     }
   }
   submitNounQuery(evt){
       evt.preventDefault();
       console.log("Make nouns noun-ier");
+      queryNounOnly(this.state.query).then(data => {
+        this.setState({
+          noun: data
+        })
+      })
   }
   submitSloganQuery(evt){
     evt.preventDefault();
@@ -21,12 +29,19 @@ class GenerateContainer extends Component {
       this.setState({
         hasGenerated: true,
         words: data,
+        noun: data[0],
+        adj: data[1]
       });
     });
   }
   submitAdjectiveQuery(evt){
     evt.preventDefault();
     console.log("I love the poorly educated");
+    queryAdjOnly(this.state.query).then(data => {
+      this.setState({
+        adj: data
+      })
+    })
   }
   render(){
     let starterWords = [
@@ -37,7 +52,7 @@ class GenerateContainer extends Component {
     if (this.state.hasGenerated){
       return (
         <div>
-        <Results words={this.state.words} noun={this.state.words[0]} adj={this.state.words[1]}/>
+        <Results words={this.state.words} noun={this.state.noun} adj={this.state.adj}/>
           <Generate
             handleSubmitSloganQuery={(evt) => this.submitSloganQuery(evt)}
             handleSubmitNounQuery={(evt) => this.submitNounQuery(evt)}

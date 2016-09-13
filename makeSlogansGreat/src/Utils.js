@@ -1,6 +1,6 @@
 import $ from 'jquery';
 
-export function queryApi() {
+function queryApi() {
 
   var randNounUrl = 'https://make-slogans-great-api.herokuapp.com/randomnoun'
   var randAdjUrl = 'https://make-slogans-great-api.herokuapp.com/randomadj'
@@ -15,6 +15,25 @@ export function queryApi() {
       var response = [noun, adjective]; //return both
       console.log(response);
       return response;
-    })
-  })
+    });
+  });
 }
+
+function queryNounOnly() {
+  var randNounUrl = 'https://make-slogans-great-api.herokuapp.com/randomnoun'
+  return $.getJSON(randNounUrl).then(function(noun){ //query first api
+    noun["content"] = " " + noun["content"].charAt(0).toUpperCase() + noun["content"].slice(1) + " ";
+
+    return noun;
+  });
+}
+
+function queryAdjOnly() {
+  var randAdjUrl = 'https://make-slogans-great-api.herokuapp.com/randomadj'
+  return $.getJSON(randAdjUrl).then(function(adjective){  //query second
+    adjective["content"] = " " + adjective["content"].charAt(0).toUpperCase() + adjective["content"].slice(1) + " ";
+    return adjective;
+  });
+}
+
+export {queryApi, queryNounOnly, queryAdjOnly};
