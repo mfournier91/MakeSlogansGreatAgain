@@ -1,15 +1,14 @@
 import $ from 'jquery';
 
 export function queryApi() {
-  var nounUrl = 'http://localhost:8080/nouns';
-  var adjUrl = 'http://localhost:8080/adjectives'
-  return $.getJSON(nounUrl).then(function(nouns){ //query first api
-    var noun = nouns[Math.floor(Math.random()*nouns.length)];
+
+  var randNounUrl = 'https://make-slogans-great-api.herokuapp.com/randomnoun'
+  var randAdjUrl = 'https://make-slogans-great-api.herokuapp.com/randomadj'
+  return $.getJSON(randNounUrl).then(function(noun){ //query first api
 
     //put a space and capitalize first letter
     noun["content"] = " " + noun["content"].charAt(0).toUpperCase() + noun["content"].slice(1) + " ";
-    return $.getJSON(adjUrl).then(function(adjectives){  //query second
-      var adjective = adjectives[Math.floor(Math.random()*adjectives.length)];
+    return $.getJSON(randAdjUrl).then(function(adjective){  //query second
 
       adjective["content"] = " " + adjective["content"].charAt(0).toUpperCase() + adjective["content"].slice(1) + " ";
 
