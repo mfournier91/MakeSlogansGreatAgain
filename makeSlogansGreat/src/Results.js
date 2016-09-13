@@ -3,19 +3,16 @@ import React, {Component} from "react"
 class Results extends Component{
   render(){
     let {words} = this.props;
-    console.log(words);
-    let results = words.map((word, index) => {
-      return (
-        <div key={index} className="inlineDiv">
-          {word.content}
-        </div>
-      )
-    })
+    let {noun} = this.props;
+    let {adj} = this.props;
+    //console.log("hi", noun, adj , words);
+    console.log(noun["content"]);
+
 
     return (
       <div className="inlineDiv jumbotron">
       Make
-      {results}
+      {[noun["content"], adj["content"]]}
       Again
       </div>
     )
