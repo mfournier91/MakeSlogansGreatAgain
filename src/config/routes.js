@@ -10,9 +10,9 @@ import GenerateContainer from '../GenerateContainer'
 //The '/generate' path renders the GenerateContainer component
 var routes = (
   <Router history={browserHistory}>
-    <Route path='/' component={Main} >
+    <Route path='/MakeSlogansGreatAgain' component={Main} >
       <IndexRoute component={Home} />
-      <Route path='/generate' component={GenerateContainer} />
+      <Route path='/MakeSlogansGreatAgain/generate' component={GenerateContainer} />
     </Route>
   </Router>
 );

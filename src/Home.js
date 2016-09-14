@@ -8,7 +8,7 @@ class Home extends Component {
     return (
       <div>
         <p className='lead text-center'>I Have the Best words</p>
-        <Link to='/generate'>
+        <Link to='/MakeSlogansGreatAgain/generate'>
           <button type='button' className="trumpton center-block"> Get Started </button>
         </Link>
 
