@@ -4,7 +4,8 @@ import './App.css';
 
 class Generate extends Component {
 
-
+//three forms, each with their own button
+//Associate form submission with a function that is defined by this component's properties
   render(){
     let {handleSubmitSloganQuery, handleSubmitNounQuery, handleSubmitAdjectiveQuery} = this.props;
     return(

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import {Router, Link} from 'react-router'
 
+//Component for the welcompe page. Button links to the generate page.
 class Home extends Component {
   render() {
     return (
