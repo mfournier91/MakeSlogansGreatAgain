@@ -2,7 +2,6 @@ import React, {Component} from "react"
 
 class Results extends Component{
   render(){
-    let {words} = this.props;
     let {noun} = this.props;
     let {adj} = this.props;
     //console.log("hi", noun, adj , words);
