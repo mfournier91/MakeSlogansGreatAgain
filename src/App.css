@@ -21,6 +21,7 @@ body {
   border: solid #0f0f0e 2px;
   text-decoration: none;
   margin: 5px auto;
+
 }
 
 .trumpton-sm {
@@ -39,7 +40,7 @@ body {
   padding: 7px 14px 7px 14px;
   border: solid #0f0f0e 2px;
   text-decoration: none;
-  margin: 5px auto;
+  margin: 5px 8px;
 }
 
 .trumpton:hover {
@@ -62,9 +63,24 @@ body {
   position: fixed;
   width: 100%;
   padding: 10px;
-  background-color: rgb(0, 0, 0);
 }
 
 .fa-twitter {
   font-size: 2em;
+
+}
+
+@media screen and (max-width: 1000px) {
+  .trumpton, .trumpton-sm {
+    display: block;
+    margin: 5px auto;
+  }
+  .trumpton {
+    -webkit-border-radius: 14;
+    -moz-border-radius: 14;
+    border-radius: 14px;
+    font-size: 13px;
+    padding: 7px 14px 7px 14px;
+
+  }
 }
