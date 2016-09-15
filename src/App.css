@@ -64,3 +64,7 @@ body {
   padding: 10px;
   background-color: rgb(0, 0, 0);
 }
+
+.fa-twitter {
+  font-size: 2em;
+}

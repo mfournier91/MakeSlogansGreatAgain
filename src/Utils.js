@@ -31,7 +31,7 @@ function queryNounOnly() {  //query the noun api only and return it
 function queryAdjOnly() { //query the adjective api only and return it
   var randAdjUrl = 'https://make-slogans-great-api.herokuapp.com/randomadj'
   return $.getJSON(randAdjUrl).then(function(adjective){  //query second
-    adjective["content"] = " " + adjective["content"].charAt(0).toUpperCase() + adjective["content"].slice(1) + " ";
+    adjective["content"] = adjective["content"].charAt(0).toUpperCase() + adjective["content"].slice(1) + " ";
     return adjective;
   });
 }

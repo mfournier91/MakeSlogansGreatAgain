@@ -9,8 +9,12 @@ class GenerateContainer extends Component {
     //Define initial State
     this.state = {
       noun: {content: " Clicking "},
-      adj: {content: " Compulsory "},
+      adj: {content: "Compulsory "},
     }
+    this.state.url = {content: "http://twitter.com/home?status=Make" + this.state.noun.content + this.state.adj.content + "Again%20%23MakeSlogansGreatAgain"};
+
+
+
   }
   submitNounQuery(evt){ //function invoked by clicking on button in the Generate component
       evt.preventDefault();
@@ -19,6 +23,10 @@ class GenerateContainer extends Component {
         this.setState({
           noun: data
         });
+      }).then(() => {
+        this.setState({
+        url : {content: "http://twitter.com/home?status=Make" + this.state.noun.content + this.state.adj.content + "Again%20%23MakeSlogansGreatAgain"}
+      });
       });
   }
   submitSloganQuery(evt){ //function invoked by clicking on button in the Generate component
@@ -27,8 +35,12 @@ class GenerateContainer extends Component {
     queryApi().then(data => { //See Utils.js to see this function.
       this.setState({
         noun: data[0],
-        adj: data[1]
+        adj: data[1],
       });
+    }).then(() => {
+      this.setState({
+      url : {content: "http://twitter.com/home?status=Make" + this.state.noun.content + this.state.adj.content + "Again%20%23MakeSlogansGreatAgain"}
+    });
     });
   }
   submitAdjectiveQuery(evt){ //function invoked by clicking on button in the Generate component
@@ -38,6 +50,10 @@ class GenerateContainer extends Component {
       this.setState({
         adj: data
       });
+    }).then(() => {
+      this.setState({
+      url : {content: "http://twitter.com/home?status=Make" + this.state.noun.content + this.state.adj.content + "Again%20%23MakeSlogansGreatAgain"}
+    });
     });
   }
   render(){
@@ -45,6 +61,11 @@ class GenerateContainer extends Component {
       return (
         <div>
         <Results noun={this.state.noun} adj={this.state.adj}/>
+          <br />
+            <br />
+              <br />
+          <br />
+          <a className="fa fa-twitter" href={this.state.url["content"]}>Tweet this</a>
           <Generate
             handleSubmitSloganQuery={(evt) => this.submitSloganQuery(evt)}
             handleSubmitNounQuery={(evt) => this.submitNounQuery(evt)}
