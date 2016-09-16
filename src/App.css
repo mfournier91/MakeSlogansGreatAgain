@@ -43,7 +43,7 @@ body {
   margin: 5px 8px;
 }
 
-.trumpton:hover {
+.trumpton:hover, .trumpton-sm:hover {
   background: #995011;
   background-image: -webkit-linear-gradient(top, #995011, #ec8405);
   background-image: -moz-linear-gradient(top, #995011, #ec8405);
@@ -55,6 +55,9 @@ body {
 
 .inlineDiv {
   display: inline;
+  font-size: 1.5em;
+  background-color: transparent;
+  color: #D50F0F;
 
 }
 
