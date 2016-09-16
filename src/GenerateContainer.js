@@ -11,7 +11,7 @@ class GenerateContainer extends Component {
       noun: {content: " Clicking "},
       adj: {content: "Compulsory "},
     }
-    this.state.url = {content: "http://twitter.com/home?status=Make" + this.state.noun.content + this.state.adj.content + "Again%20%23MakeSlogansGreatAgain"};
+    this.state.url = {content: "http://twitter.com/home?status=Make" + this.state.noun.content + this.state.adj.content + "Again%20%23MakeSlogansGreatAgain%20http://bit.ly/2cd3NUL"};
 
 
 
@@ -25,7 +25,7 @@ class GenerateContainer extends Component {
         });
       }).then(() => {
         this.setState({
-        url : {content: "http://twitter.com/home?status=Make" + this.state.noun.content + this.state.adj.content + "Again%20%23MakeSlogansGreatAgain"}
+        url : {content: "http://twitter.com/home?status=Make" + this.state.noun.content + this.state.adj.content + "Again%20%23MakeSlogansGreatAgain%20http://bit.ly/2cd3NUL"}
       });
       });
   }
@@ -39,7 +39,7 @@ class GenerateContainer extends Component {
       });
     }).then(() => {
       this.setState({
-      url : {content: "http://twitter.com/home?status=Make" + this.state.noun.content + this.state.adj.content + "Again%20%23MakeSlogansGreatAgain"}
+      url : {content: "http://twitter.com/home?status=Make" + this.state.noun.content + this.state.adj.content + "Again%20%23MakeSlogansGreatAgain%20http://bit.ly/2cd3NUL"}
     });
     });
   }
@@ -52,7 +52,7 @@ class GenerateContainer extends Component {
       });
     }).then(() => {
       this.setState({
-      url : {content: "http://twitter.com/home?status=Make" + this.state.noun.content + this.state.adj.content + "Again%20%23MakeSlogansGreatAgain"}
+      url : {content: "http://twitter.com/home?status=Make" + this.state.noun.content + this.state.adj.content + "Again%20%23MakeSlogansGreatAgain%20http://bit.ly/2cd3NUL"}
     });
     });
   }
