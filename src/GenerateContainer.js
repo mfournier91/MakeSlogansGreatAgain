@@ -65,7 +65,7 @@ class GenerateContainer extends Component {
             <br />
               <br />
           <br />
-          <a className="fa fa-twitter" href={this.state.url["content"]}>Tweet this</a>
+          <a className="fa fa-twitter" href={this.state.url["content"]} target="_blank">Tweet this</a>
           <Generate
             handleSubmitSloganQuery={(evt) => this.submitSloganQuery(evt)}
             handleSubmitNounQuery={(evt) => this.submitNounQuery(evt)}
